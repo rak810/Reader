@@ -1,0 +1,265 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,400&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --m-plus2: 'M PLUS 2', sans-serif; 
+    --playfair: 'Playfair Display', serif;
+    --beige: rgb(249, 243, 223);
+    --light-green: rgb(205, 242, 202);
+    --light-pink: rgb(255, 222, 250);
+    --light-orange: rgb(255, 200, 152);
+}
+
+body {
+    width: 100vw;
+    font-size: 15px;
+    font-family: var(--m-plus2);
+    background-color: rgb(253, 222, 195);
+    overflow: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-green);
+    background-color: #316B83;
+    display: block;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: 3px 3px var(--light-green);
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+}
+
+header {
+    display:  flex;
+    flex-direction: row;
+    width: 94%;
+    background-color: var(--beige);
+    height: 70px;
+    padding: 0 3%;
+    align-items: center;
+    border-bottom: 5px solid var(--light-orange);
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-basis: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    cursor: pointer;
+    transition: ease-in 0.1s;
+    margin-left: 0.8rem;
+    font-weight: 400;
+    color: #4d686d;
+
+}
+
+header ul li:not(:last-child):hover {
+    border-bottom: 2px solid #4d686d;
+}
+
+header ul img  {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header h3 {
+    flex-basis: 80%;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 0;
+    color: #607e83;
+    text-shadow: 2px 2px rgb(127, 209, 205);
+}
+
+main {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: calc(100vh - 70px);
+}
+
+.profile-div {
+    background-color: rgb(227, 241, 238);
+    flex-basis: 20%;    
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.profile-div img {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid rgb(29, 146, 121);
+}
+
+
+.profile-div h2 {
+    font-weight: 500;
+    color: rgb(6, 43, 35);
+}
+
+.uname-p {
+    font-size: 0.9rem;
+    color: rgb(168, 164, 164);
+}
+
+.prof-p, .bio-p {
+    text-align: center;
+    color: rgb(6, 43, 35);
+}
+
+.bio-p {
+    font-weight: bold;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.edit-btn {
+    font-size: 0.8rem;
+    padding: 1px 3px;
+    margin-top: 2rem;
+}
+.posts-div{
+    /* background-color: blue; */
+    flex-basis: 80%;
+    margin: 1rem 5rem;
+    margin-bottom: -1rem;
+}
+
+.tabs {
+    height: 30px;
+    /* background-color: red; */
+    display:  flex;
+    list-style: none;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tabs li {
+    display: block;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    padding-top: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs li:not(.active-tab):hover {
+    background-color: rgb(125, 228, 205);
+}
+
+
+.active-tab {
+    color: white;
+    background-color: rgb(29, 146, 121);
+}
+
+.posts {
+    height: calc(100% - 34px);
+    margin-top: 4px;
+    border-top:2px solid rgb(29, 146, 121);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.card {
+    background-color: rgb(245, 255, 253);
+    display: flex;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.img-div {
+    flex-basis: 30%;
+}
+
+.img-div img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-text {
+    flex-basis: 70%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.auth-date-p {
+    font-size: 0.9 rem;
+    color: rgb(160, 151, 151);
+    margin-bottom: 2px;
+}
+
+.author {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card-summary {
+    margin-bottom: 10px;
+}
+
+.tag {
+    background: rgb(29, 146, 121);
+    padding: 3px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: white;
+    margin-right: 3px;
+}
+
+.operations {
+    margin-top: 15px;
+    color: white;
+}
+
+    .operations span {
+        padding: 1px 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline;
+        margin-right:10px;
+    }
+
+#edit {
+    background-color: green;
+}
+
+#delete {
+    background-color: red;
+}
+
+.displayClass {
+    display: none;
+}

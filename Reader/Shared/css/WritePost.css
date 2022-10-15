@@ -1,0 +1,135 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,400&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --m-plus2: 'M PLUS 2', sans-serif; 
+    --playfair: 'Playfair Display', serif;
+    --beige: rgb(249, 243, 223);
+    --light-green: rgb(205, 242, 202);
+    --light-pink: rgb(255, 222, 250);
+    --light-orange: rgb(255, 200, 152);
+}
+
+body {
+    width: 100vw;
+    font-size: 15px;
+    font-family: var(--m-plus2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+header {
+    display:  flex;
+    flex-direction: row;
+    width: 94%;
+    background-color: var(--beige);
+    height: 70px;
+    padding: 0 3%;
+    align-items: center;
+    border-bottom: 5px solid var(--light-orange);
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-basis: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    cursor: pointer;
+    transition: ease-in 0.1s;
+    margin-left: 0.8rem;
+    font-weight: 400;
+    color: #4d686d;
+
+}
+
+header ul li:not(:last-child):hover {
+    border-bottom: 2px solid #4d686d;
+}
+
+header ul img  {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header h3 {
+    flex-basis: 80%;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 0;
+    color: #607e83;
+    text-shadow: 2px 2px rgb(127, 209, 205);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    height: 580px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.editor {
+    display:  flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+
+.editor * {
+    margin: 0 1rem;
+    margin-bottom: 5px;
+    font-family: --var(--m-plus2);
+}
+
+.editor:first-child {
+    margin-top: 10px;
+}
+
+input {
+    height: 30px;
+    padding-left: 10px;
+    border: 5px solid #607e83;
+    outline: none;
+}
+
+textarea {
+    font-family: var(--m-plus2);
+    padding-left: 10px;
+    outline: none;
+    border: 5px solid #607e83;
+    height: 380px;
+    resize: none;
+}
+
+button {
+    border: 5px 5px solid var(--light-orange);
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #607e83;
+    color: white;
+}
+/* a {
+    text-decoration: none;
+    color: var(--light-green);
+    background-color: #316B83;
+    display: block;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: 3px 3px var(--light-green);
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+} */
+
